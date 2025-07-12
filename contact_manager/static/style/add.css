@@ -1,0 +1,49 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #fdfcfc, #e6e9f0);
+    background-image: repeating-radial-gradient(circle at 20px 20px, #e0f7ff 2px, transparent 5px);
+    padding: 40px;
+}
+.container {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    padding: 30px;
+    max-width: 400px;
+    margin: auto;
+}
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #444;
+}
+input, button {
+    padding: 12px;
+    margin: 10px 0;
+    width: 100%;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+input:focus {
+    border-color: #5c7cfa;
+    outline: none;
+}
+button {
+    background: linear-gradient(135deg, #28a745, #00c851);
+    color: white;
+    border: none;
+}
+button:hover {
+    background: linear-gradient(135deg, #218838, #007E33);
+}
+a {
+    display: block;
+    margin-top: 15px;
+    text-align: center;
+    text-decoration: none;
+    color: #007BFF;
+}
+a:hover {
+    color: #0056b3;
+}

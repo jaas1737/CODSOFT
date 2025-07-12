@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+    <title>Contact Manager</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/home.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Contact Manager</h1>
+        <form method="POST" action="/">
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="text" name="phone" placeholder="Phone" required>
+            <button type="submit">Add Contact</button>
+        </form>
+        <form action="/contacts" method="get">
+            <button class="view-btn" type="submit">View Contacts</button>
+        </form>
+    </div>
+</body>
+</html>
