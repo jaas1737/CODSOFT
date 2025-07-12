@@ -1,10 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for
-
 app = Flask(__name__)
-
-# In-memory contact list
 contacts = []
-
 @app.route('/', methods=['GET', 'POST'])
 def home():
     if request.method == 'POST':
@@ -13,7 +9,6 @@ def home():
         contacts.append({'name': name, 'phone': phone})
         return redirect(url_for('home'))
     return render_template('home.html')
-
 @app.route('/add', methods=['GET', 'POST'])
 def add_contact():
     if request.method == 'POST':
