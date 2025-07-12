@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Virtual Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="calculator">
+        <form method="post">
+            <input type="text" name="expression" value="{{ expression }}" readonly><br>
+            <div class="button-grid">
+                {% for row in buttons %}
+                    {% for button in row %}
+                        {% if button == 'C' %}
+                            <button type="submit" name="btn" value="{{ button }}" class="clear-button">{{ button }}</button>
+                        {% else %}
+                            <button type="submit" name="btn" value="{{ button }}">{{ button }}</button>
+                        {% endif %}
+                    {% endfor %}
+                {% endfor %}
+            </div>
+        </form>
+    </div>
+</body>
+</html>
